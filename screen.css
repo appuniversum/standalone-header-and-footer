@@ -1,0 +1,490 @@
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* Font */
+@font-face {
+    font-family: flanders-sans;
+    src: url(https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-light.woff2) format("woff2"),
+    url(https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: flanders-sans;
+    src: url(https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-regular.woff2) format("woff2"),
+    url(https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: flanders-sans;
+    src: url(https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-medium.woff2) format("woff2"),
+    url(https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: flanders-sans;
+    src: url(https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-bold.woff2) format("woff2"),
+    url(https://d1l6j3bn1os9t0.cloudfront.net/3.latest/fonts/flanders/flanders-sans-bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+}
+
+/* Global styling */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: "flanders-sans", BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    min-height: 100%;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+::-moz-selection {
+    color: #212326;
+    background-color: #DCECFD;
+}
+
+::selection {
+    color: #212326;
+    background-color: #DCECFD;
+}
+
+/* Brand */
+.au-c-brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.au-c-brand--link:focus {
+    outline: 0;
+}
+
+.au-c-brand__logo {
+    position: relative;
+    width: 4.2rem;
+    height: 4.2rem;
+    padding-left: 0.75rem;
+    overflow: hidden;
+    transition: background-color 125ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.au-c-brand__logo::after,
+.au-c-brand__logo::before {
+    display: block;
+    position: absolute;
+    content: "";
+}
+
+.au-c-brand__logo svg {
+    fill: #212326;
+    height: 100%;
+    width: 56%;
+}
+
+.au-c-brand__logo::before {
+    right: -0.1rem;
+    bottom: -0.3rem;
+    border-top: 9rem solid #fff;
+    border-left: 3.07818rem solid transparent;
+}
+
+.au-c-brand__logo::after {
+    top: -0.2rem;
+    right: 17%;
+    transform: rotate(-19deg);
+    width: 0.1rem;
+    height: calc(100% + 0.4rem);
+    background-color: #ccd1d9;
+}
+
+.au-c-brand--link:focus .au-c-brand__logo,
+.au-c-brand--link:hover .au-c-brand__logo {
+    background-color: #e6e8eb;
+}
+
+.au-c-brand--tagline .au-c-brand__logo {
+    width: 4.8rem;
+    height: 4.8rem;
+}
+
+.au-c-brand__logotype {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1;
+    display: none;
+    position: relative;
+    color: #212326;
+    margin-left: 0.6rem;
+    transition: color 125ms cubic-bezier(0.19, 1, 0.22, 1);
+    font-weight: 500;
+}
+
+.au-c-brand--tagline .au-c-brand__logotype {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 4.2rem;
+    padding-right: 1.2rem;
+}
+
+@media (min-width: 47.9375em) {
+    .au-c-brand__logotype {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 4.2rem;
+        padding-right: 1.2rem;
+    }
+
+    .au-c-brand--link:focus .au-c-brand__logotype,
+    .au-c-brand--link:hover .au-c-brand__logotype {
+        color: #0f6fd7;
+    }
+
+    .au-c-brand--link:focus .au-c-brand__logotype {
+        outline: #ffc515 dashed 0.2rem;
+    }
+}
+
+.au-c-brand__main {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    display: block;
+}
+
+.au-c-brand__tagline {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-weight: 400;
+    display: block;
+    color: #2a2d31;
+}
+
+/* Header */
+.au-c-main-header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(33, 35, 38, 0.1), 0 4px 20px rgba(33, 35, 38, 0.035), 0 1px 1px rgba(33, 35, 38, 0.025);
+}
+
+.au-c-main-header__title-group {
+    display: flex;
+    align-items: center;
+    color: #2a2d31;
+    text-decoration: none;
+}
+
+.au-c-main-header__title {
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    padding: 0.6rem;
+    color: #2a2d31;
+    transition: color 125ms cubic-bezier(0.19, 1, 0.22, 1), text-decoration-color 125ms cubic-bezier(0.19, 1, 0.22, 1);
+    letter-spacing: 0.03ex;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 9.6rem;
+}
+
+@media (min-width: 31.25em) {
+    .au-c-main-header__title {
+        max-width: 14.4rem;
+    }
+}
+
+@media (min-width: 47.9375em) {
+    .au-c-main-header__title {
+        margin-left: 0;
+        padding-left: 2.4rem;
+        max-width: 19.2rem;
+    }
+
+    .au-c-main-header__title::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0.5rem;
+        transform: rotate(-19deg);
+        width: 0.1rem;
+        height: 3rem;
+        background-color: #ccd1d9;
+    }
+}
+
+.au-c-main-header__title--link {
+    text-decoration: underline;
+    text-underline-offset: 0.3ex;
+}
+
+.au-c-main-header__title--link,
+.au-c-main-header__title--link:visited {
+    color: #2a2d31;
+    text-decoration-color: #bfc0c1;
+}
+
+.au-c-main-header__title--link:focus,
+.au-c-main-header__title--link:hover {
+    color: #545961;
+    text-decoration: underline;
+    text-decoration-color: #dddedf;
+}
+
+.au-c-main-header__title--link:focus {
+    outline: #ffc515 dashed 0.2rem;
+}
+
+.au-c-main-header__skiplink {
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+    position: absolute;
+    transition: color 125ms cubic-bezier(0.19, 1, 0.22, 1);
+    letter-spacing: 0.03ex;
+    margin-left: 1.2rem;
+    padding: 0.6rem;
+    background-color: #f4f5f6;
+    border-radius: 0.4rem;
+    z-index: 1;
+    top: -1000px;
+    left: -1000px;
+}
+
+.au-c-main-header__skiplink,
+.au-c-main-header__skiplink:focus,
+.au-c-main-header__skiplink:hover {
+    color: #2a2d31;
+    text-decoration: underline;
+    text-decoration-color: #d4d5d6;
+}
+
+.au-c-main-header__skiplink:focus {
+    outline: #ffc515 dashed 0.2rem;
+    top: 4.8rem;
+    left: -0.6rem;
+}
+
+@media (min-width: 63.9375em) {
+    .au-c-main-header__title {
+        max-width: initial;
+    }
+
+    .au-c-main-header__skiplink {
+        position: relative;
+    }
+
+    .au-c-main-header__skiplink:focus {
+        top: 0;
+        left: 0;
+    }
+}
+
+.au-c-main-header__actions {
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 0.7;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+}
+
+/* Footer */
+.au-c-main-footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.4rem;
+    background-color: #fff;
+    border-top: 0.1rem solid #e6e8eb;
+}
+
+.au-c-main-footer__brand {
+    padding-right: 2.4rem;
+    padding-bottom: 2.4rem;
+}
+
+@media (min-width: 100em) {
+    .au-c-main-footer__brand {
+        padding-right: 4.8rem;
+    }
+}
+
+/* Links */
+.au-c-link {
+    display: inline-flex;
+    align-items: center;
+    transition: color 125ms cubic-bezier(0.19, 1, 0.22, 1), text-decoration 125ms cubic-bezier(0.19, 1, 0.22, 1);
+    font-weight: 400;
+    text-decoration-color: #b7cfea;
+}
+
+.au-c-link,
+.au-c-link:visited {
+    color: #0e5eb8;
+}
+
+.au-c-link:focus,
+.au-c-link:hover {
+    color: #0f6fd7;
+    text-decoration-color: #cfe2f7;
+}
+
+.au-c-link:focus {
+    outline: #ffc515 dashed 0.2rem;
+    outline-offset: 0.3rem;
+}
+
+.au-c-link.is-active {
+    font-weight: 500;
+    color: #212326;
+    text-decoration: none;
+    pointer-events: none;
+}
+
+.au-c-link--secondary,
+.au-c-link--secondary:visited {
+    color: #2a2d31;
+    text-decoration-color: #bfc0c1;
+}
+
+.au-c-link--secondary:focus,
+.au-c-link--secondary:hover {
+    color: #545961;
+    text-decoration-color: #dddedf;
+}
+
+.is-active > .au-c-link--secondary {
+    color: #212326;
+    text-decoration: none;
+}
+
+.au-c-link--secondary.is-active {
+    color: #212326;
+}
+
+/* Icons */
+.au-c-icon {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    position: relative;
+    vertical-align: baseline;
+    bottom: 0.05ex;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.au-c-icon--left {
+    margin-right: 0.6rem;
+}
+
+/* Content */
+.au-c-content {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.au-c-content--small {
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.au-c-content > * + * {
+    margin-top: 2.4rem;
+}
+
+.au-c-heading--4 {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* List */
+.au-c-list-horizontal {
+    display: flex;
+    align-items: center;
+}
+
+.au-c-list-horizontal__item {
+    display: flex;
+    align-items: center;
+}
+
+.au-c-list-horizontal__item + .au-c-list-horizontal__item {
+    margin-left: 1.2rem;
+    padding-left: 1.2rem;
+    border-left: 1px dotted #ccd1d9;
+}
+
+.au-c-list-horizontal__item > .au-c-button,
+.au-c-list-horizontal__item > .au-c-dropdown,
+.au-c-list-horizontal__item > .ember-view > .au-c-button {
+    margin-left: -0.6rem;
+}
